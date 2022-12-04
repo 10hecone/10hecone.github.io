@@ -173,6 +173,7 @@ function blockTable() {
     };
     document.getElementById("reset").style.visibility = "visible"; 
     document.getElementById("reset").style.animation = "fadeIn 1s";
+    alert('Resultat : ' + table.game.morpion.winner);
 };
 
 /**
@@ -185,16 +186,16 @@ function evaluation(p) {
     const player = checkWin('X', plateau);
     const bot = checkWin('O', plateau);
     if(table.game.morpion.coup === 9) {
-        blockTable();
-        return table.game.morpion.winner = "Draw";
+        table.game.morpion.winner = "Draw";
+        return blockTable();
     };
     if(player.win === 'X') {
-        blockTable();
-        return table.game.morpion.winner = "Plauer";
+        table.game.morpion.winner = "Player";
+        return blockTable();
     };
     if(bot.win === 'O') {
-        blockTable();
-        return table.game.morpion.winner = "Bot";
+        table.game.morpion.winner = "Bot";
+        return blockTable();
     };
     if(p === 'X') return botCoup(plateau);
 };
