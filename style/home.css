@@ -8,7 +8,7 @@ header {
     font-size: 200%;
 }
 
-button {
+.header-button {
     background-color: transparent;
     border: 0;
     font-size: 200%;
@@ -18,12 +18,12 @@ button {
     transition: 0.5s;
 }
 
-button:hover {
+.header-button:hover {
     color: rgb(150, 93, 93);
     transition: 0.5s;
 }
 
-button:active {
+.header-button:active {
     opacity: 0;
     transition: 0.5s;
 }
@@ -38,5 +38,25 @@ p {
 
 p:hover {
     color: rgb(150, 93, 93);
+    transition: 0.5s;
+}
+
+.morpion {
+    display: block;
+    margin: auto;
+    width: 30%;
+    margin-top: 5%;
+    font-size: 200%;
+    background-color: transparent;
+    color: rgb(221, 221, 221);
+    border-color: white;
+    border-radius: 10%;
+    cursor: none;
+    transition: 0.5s;
+}
+
+.morpion:hover {
+    color: rgb(29, 28, 28);
+    background-color: white;
     transition: 0.5s;
 }
