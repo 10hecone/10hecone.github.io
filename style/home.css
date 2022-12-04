@@ -42,8 +42,7 @@ p:hover {
 }
 
 .morpion {
-    display: block;
-    margin: auto;
+    
     width: 30%;
     margin-top: 5%;
     font-size: 200%;
@@ -53,6 +52,7 @@ p:hover {
     border-radius: 10%;
     cursor: none;
     transition: 0.5s;
+    
 }
 
 .morpion:hover {
