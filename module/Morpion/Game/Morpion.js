@@ -42,11 +42,24 @@ export class Morpion {
         };
     };
 
+    findRigthValue() {
+        for(let i = 0; i <= 2; i++) {
+            if(this.board[i][0] === 0 && this.board[i][1] === 'X' && this.board[i][2] === 'X') return {x: i, y: 0};
+            if(this.board[i][0] === 'X' && this.board[i][1] === 0 && this.board[i][2] === 'X') return {x: i, y: 1};
+            if(this.board[i][0] === 'X' && this.board[i][1] === 'X' && this.board[i][2] === 0) return {x: i, y: 2};
+            if(this.board[0][i] === 0 && this.board[1][i] === 'X' && this.board[2][i] === 'X') return {x: 0, y: i};
+            if(this.board[0][i] === 'X' && this.board[1][i] === 0 && this.board[2][i] === 'X') return {x: 1, y: i};
+            if(this.board[0][i] === 'X' && this.board[1][i] === 'X' && this.board[2][i] === 0) return {x: 2, y: i};
+        };
+        return false;
+    };
+
     bot() {
         if(this.res.win === undefined) {
             if(this.tour === 'O') {
                 let value = {x: Math.floor(Math.random() * 3), y: Math.floor(Math.random() * 3)};
-    
+
+                if(this.findRigthValue()) value = this.findRigthValue();
                 if(this.board[value.x][value.y] === 0) {
                     if(value.x === 0 && value.y === 0) this.ancienTour = 1;
                     if(value.x === 0 && value.y === 1) this.ancienTour = 2;
