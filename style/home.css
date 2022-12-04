@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(29, 28, 28);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    font-size: 200%;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    font-size: 200%;
+    color: rgb(221, 221, 221);
+    font-weight: bold;
+    cursor: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: rgb(150, 93, 93);
+    transition: 0.5s;
+}
+
+button:active {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+p {
+    text-align: center;
+    font-size: 200%;
+    color: rgb(221, 221, 221);
+    cursor: none;
+    transition: 0.5s;
+}
+
+p:hover {
+    color: rgb(150, 93, 93);
+    transition: 0.5s;
+}
