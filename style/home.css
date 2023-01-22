@@ -1,6 +1,10 @@
 body {
     background-color: rgb(29, 28, 28);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
 }
 
 header {
