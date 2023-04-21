@@ -101,7 +101,8 @@ main .container input {
 
 main .container input:hover {
     transition: 0.5s;
-    color: rgb(78, 11, 97);
+   
+    color: #4E0B61;
 }
 
 footer h3 {
