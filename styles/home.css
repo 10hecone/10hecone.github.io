@@ -1,0 +1,184 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url(‘http://127.0.0.1:5500/fonts/SourceSansPro-Light.ttf’) format(‘truetype’)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; 
+}
+
+
+
+body {
+    background-color: #FFFFFF;
+    background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* main .space {
+    animation-duration: 2s;
+    width: 400px;
+    height: 400px;
+    animation-name: slidein;
+    opacity: 80%;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.438);
+    margin-bottom: 5%;
+    border-radius: 100px;
+} */
+
+p {
+    animation-duration: 2s;
+    animation-name: slideout;
+    margin-bottom: 0.5%;
+    color: rgba(182, 169, 185, 0.671);
+    font-weight: bold;
+    text-overflow: ellipsis; 
+    text-align: justify;
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 10%;
+    background-color: #ac99b1bd;
+    border-radius: 40px;
+    font-size: 175%;
+    transition: 0.5s;
+    color: rgba(27, 6, 32, 0.671);
+    animation-duration: 2s;
+    animation-name: slidein;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+main .container:hover {
+    transition: 0.5s;
+    box-shadow: 5px 0px 5px rgba(100, 21, 136, 0.671);
+}
+
+main .container button {
+    flex: 0.1;
+    padding: 2%;
+    border-style: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+main .container .search:hover {
+    margin-bottom: 0.5%;
+    transition: 0.2s;
+}
+
+main .container input {
+    background-color: transparent;
+    flex: 0.85;
+    width: 100%;
+    height: 100%;
+    font-size: 200%;
+    text-overflow: ellipsis; 
+    border-style: none;
+    color: rgb(57, 8, 70);
+    text-align: start;
+    padding-left: 4%;
+    outline: none;
+    transition: 0.5s;
+}
+
+main .container input:hover {
+    transition: 0.5s;
+    color: rgb(78, 11, 97);
+}
+
+footer h3 {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    color: rgba(182, 169, 185, 0.671);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1400px) {
+    main .container button {
+        flex: 0.3;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main .container button {
+        flex: 0.5;
+    }
+
+    main .container {
+        width: 70%;
+    }
+
+    main .container input {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    main .container {
+        height: 10%;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    main .container {
+        height: 20%;
+    }
+}
+
+
+  
+  @keyframes slidein {
+    from {
+      position: relative;
+      margin-left: 200%;
+    }
+    
+    to {
+      margin-left: 0%;
+      position: static;
+    }
+  }
+  
+  @keyframes slideout {
+    from {
+      position: relative;
+      margin-right: 200%;
+    }
+  
+    65% {
+      margin-right: -20%;
+    }
+
+    to {
+      margin-right: 0%;
+      position: static;
+    }
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
