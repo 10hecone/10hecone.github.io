@@ -71,6 +71,7 @@ main .container:hover {
 main .container button {
     flex: 0.1;
     padding: 2%;
+    margin-left: 0%;
     border-style: none;
     outline: none;
     text-decoration: none;
@@ -160,13 +161,34 @@ footer h3 {
     transition: 0.5s;
 }
 
+.result-container #button-dl {
+    padding: 2%;
+    margin: 2%;
+    background-color: #ffffff6b;
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgba(27, 6, 32, 0.671);
+    border-style: none;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.result-container #button-dl:hover {
+    box-shadow: 5px 5px 5px rgba(30, 6, 41, 0.671);
+    transition: 0.5s;
+}
+
 .result-container .back-result-sous {
     background-color: transparent;
     border-radius: 20px;
     display: flex;
-    align-items: center;
-    flex-flow: row ;
+    scrollbar-width: auto;
+    flex-flow: row;
     flex-wrap: wrap;
+    overflow-y: auto;
+    scrollbar-width: none;
+    align-items: center;
 }
 
 a:hover {
@@ -175,7 +197,9 @@ a:hover {
 }
 
 a {
+    text-align: center;
     width: max-content;
+    height: max-content;
     color: rgba(27, 6, 32, 0.671);
     text-decoration: none;
     background-color: #f3f3f36b;
@@ -189,17 +213,29 @@ a {
 
 @media screen and (max-width: 1400px) {
     main .container button {
-        flex: 0.3;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    main .container button {
-        flex: 0.5;
+        flex: 0.1;
     }
 
     main .container {
         width: 70%;
+    }
+
+    .result-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main .container button {
+        flex: 0.125;
+    }
+
+    main .container {
+        width: 90%;
+    }
+
+    .result-container {
+        width: 90%;
     }
 
     main .container input {
@@ -207,15 +243,35 @@ a {
     }
 }
 
+@media screen and (max-width: 600px) {
+    main .container button {
+        flex: 0.3;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    main .container {
+        border-radius: 0px;
+    }
+
+    .result-container {
+        border-radius: 0px;
+    }
+
+    main .container button {
+        flex: 0.55;
+    }
+}
+
 @media screen and (max-height: 800px) {
     main .container {
-        height: 10%;
+        height: 12%;
     }
 }
 
 @media screen and (max-height: 400px) {
     main .container {
-        height: 20%;
+        height: 30%;
     }
 }
 
