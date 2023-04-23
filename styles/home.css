@@ -92,16 +92,27 @@ main .container input {
     font-size: 200%;
     text-overflow: ellipsis; 
     border-style: none;
-    color: rgb(57, 8, 70);
+    color: rgba(57, 8, 70, 0.671);
     text-align: start;
     padding-left: 4%;
     outline: none;
     transition: 0.5s;
 }
 
+::placeholder {
+    color: rgba(57, 8, 70, 0.671);
+  }
+  
+  :-ms-input-placeholder { 
+    color: rgba(57, 8, 70, 0.671);
+  }
+  
+  ::-ms-input-placeholder { 
+    color: rgba(57, 8, 70, 0.671);
+  }
+
 main .container input:hover {
     transition: 0.5s;
-   
     color: #4E0B61;
 }
 
