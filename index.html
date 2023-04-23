@@ -24,17 +24,46 @@
     <header>
 
     </header>
-    <main>
+    <main id="main,">
         <!-- <img class="space" src="images/space-shuttle-launch.png" alt="space"> -->
         <p>Find your customer's information easily!</p>
         <div class="container">
-            <input id="search" type="text" name="search" placeholder="Search a client 几乎" minlength="2" maxlength="30">
+            <input id="search" type="text" name="search" placeholder="Search a client 几乎" minlength="2" maxlength="30" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)">
             <button class="search"><img src="images/search.png" alt="Search"></button>
+        </div>
+        <div id="result-container" class="result-container">
+            <h1 id="title" class="back-result">Alpha Test</h1>
+            <h2 id="nump" class="back-result">Pro number found : +33 c cc cc cc cc</h2>
+            <h2 id="emailp" class="back-result">Pro email found : example@mail.com</h2>
+            <h2 id="pf" class="back-result">Pages found : </h2>
+            <div id="nump" class="back-result-sous"> 
+                <a href="https://www.linkedin.com/in/example-000/">LinkedIn</a>
+                <a href="/">Monster</a>
+                <a href="/">Apec</a>
+                <a href="/">Jobcase</a>
+                <a href="/">Recruiter Box</a>
+                <a href="/">Angel List</a>
+                <a href="/">Glassdoor</a>
+                <a href="/">...</a>
+            </div>
         </div>
     </main>
     <footer>
         <h3>10hecone</h3>
     </footer>
+    <script>
+        document.getElementById('search').addEventListener('keyup', (e) => {
+            const d = document.getElementById("search").value
+            if(d.length <= 2) document.getElementById('result-container').style.display = "none";
+            if(!/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/.test(d)) return;
+            if (e.keyCode === 13) {
+                document.getElementById('result-container').style.display = "flex";
+                document.querySelector('#title').innerHTML = d;
+                document.querySelector('#nump').innerHTML = "Pro number found : " + "+33 c cc cc cc cc"
+                document.querySelector('#emailp').innerHTML = "Pro email found : " + String(d).trim().replaceAll(" ", "_").toLowerCase() + "@mail.com";
+            }
+        });
+    </script>
 </body>
 
 </html>

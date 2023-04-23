@@ -65,7 +65,7 @@ main .container {
 
 main .container:hover {
     transition: 0.5s;
-    box-shadow: 5px 0px 5px rgba(100, 21, 136, 0.671);
+    box-shadow: 5px 5px 5px rgba(30, 6, 41, 0.671);
 }
 
 main .container button {
@@ -113,7 +113,7 @@ main .container input {
 
 main .container input:hover {
     transition: 0.5s;
-    color: #4E0B61;
+    color: rgba(57, 8, 70, 0.671);
 }
 
 footer h3 {
@@ -123,6 +123,69 @@ footer h3 {
     color: rgba(182, 169, 185, 0.671);
     font-weight: bold;
 }
+
+.result-container {
+    width: 40%;
+    background-color: aqua;
+    height: 70%;
+    margin-top: 1%;
+    background-color: #ac99b1bd;
+    border-radius: 40px;
+    transition: 0.5s;
+    color: rgba(27, 6, 32, 0.671);
+    animation-duration: 2s;
+    animation-name: slidein;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.result-container:hover {
+    box-shadow: 5px 5px 5px rgba(30, 6, 41, 0.671);
+}
+
+.result-container .back-result {
+    background-color: #ffffff6b;
+    border-radius: 20px;
+    padding: 2%;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 2%;
+    transition: 0.5s;
+}
+
+.result-container .back-result:hover {
+    box-shadow: 5px 5px 5px rgba(30, 6, 41, 0.671);
+    transition: 0.5s;
+}
+
+.result-container .back-result-sous {
+    background-color: transparent;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: row ;
+    flex-wrap: wrap;
+}
+
+a:hover {
+    box-shadow: 5px 5px 5px rgba(30, 6, 41, 0.671);
+    transition: 0.5s;
+}
+
+a {
+    width: max-content;
+    color: rgba(27, 6, 32, 0.671);
+    text-decoration: none;
+    background-color: #f3f3f36b;
+    border-radius: 10px;
+    padding: 4%;
+    margin: 2%;
+    font-weight: bold;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 @media screen and (max-width: 1400px) {
     main .container button {
